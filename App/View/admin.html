@@ -1,0 +1,29 @@
+{% if erro %}
+<div class="alert alert-danger" role="alert">
+    {{ erro }}
+  </div>
+{% endif %}
+
+<a href="index.php?pagina=admin&metodo=criarForm"><button id="btnCriar" type="button" class="btn btn-success">Criar novo produto</button></a>
+<div id="tabela">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Codigo</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos %}
+        <tr>
+            <th scope="row">{{ produto.id_produto }}</th>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.codigo }}</td>
+            <td><a href="index.php?pagina=admin&metodo=editarForm&id={{ produto.id_produto }}"><button type="button" class="btn btn-warning">Editar</button></a></td>
+            <td><a href="index.php?pagina=admin&metodo=deletar&id={{ produto.id_produto }}"><button type="button" class="btn btn-danger">Deletar</button></a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,6 @@
+{
+    "name": "jeronimo/gestao-estoque",
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

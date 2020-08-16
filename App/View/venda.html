@@ -1,0 +1,18 @@
+<div id="registroConteudo">
+  <form method="post" action="index.php?pagina=dashboard&metodo=venda">
+    <input type="hidden" name="id_produto" value="{{ produto.id_produto }}">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Preço</label>
+          <input name="preco" type="number" class="form-control" min="1" step="any" value="{{ produto.preco }}" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Quantidade</label>
+            <input name="quantidade" type="number" class="form-control" min="1" step="any" value="1" required>
+          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Data de compra</label>
+          <input name="data_de_venda" type="date" class="form-control" required>
+        </div>
+          <button type="submit" class="btn btn-primary">Contabilizar venda</button>
+        </form>
+  </div>

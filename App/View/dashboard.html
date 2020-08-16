@@ -1,0 +1,27 @@
+<div id="tabela">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Quantidade vendida</th>
+            <th scope="col">Preço total</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Data de compra</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for venda in vendas %}
+        <tr>
+            <th scope="row">{{ venda.id_produto }}</th>
+            <td>{{ venda.nome }}</td>
+            <td>{{ venda.quantidade  }}</td>
+            <td>{{ venda.preco_produto }}</td>
+            <td>{{ venda.codigo }}</td>
+            <td>{{ venda.data_venda }}</td>
+            <td><a href="index.php?pagina=home&metodo=vendaForm&id={{ produto.id_produto }}"><button class="btn btn-primary">Contabilizar venda</button></a></td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
